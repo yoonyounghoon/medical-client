@@ -1,5 +1,6 @@
 import Footer from 'components/Footer/Footer';
 import PageNotFound from 'components/PageNotFound';
+import PharmacyDetail from 'components/PharmacyList/PharmacyDetail';
 import Sidebar from 'components/Sidebar';
 import CovidPage from 'pages/CovidPage';
 import MedicalCheckPage from 'pages/MedicalCheckPage';
@@ -14,7 +15,8 @@ function App() {
       <Switch>
         <Route path="/" exact component={MedicalCheckPage} />
         <Route path="/covid" component={CovidPage} />
-        <Route path="/pharmacy" component={PharmacyPage} />
+        <Route path="/pharmacy" exact component={PharmacyPage} />
+        <Route path="/pharmacy/:id" component={PharmacyDetail} />
         <Route component={PageNotFound} />
       </Switch>
       <Footer />
