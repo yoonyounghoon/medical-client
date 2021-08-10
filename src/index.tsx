@@ -4,14 +4,19 @@ import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { configureStore } from '@reduxjs/toolkit';
-import rootReducer, { sagaMiddleware } from 'modules';
+import { rootSaga, rootReducer } from 'modules';
+import createSagaMiddleware from 'redux-saga';
 import { Provider } from 'react-redux';
 import { setPosition } from 'modules/position';
+
+const sagaMiddleware = createSagaMiddleware();
 
 const store = configureStore({
   reducer: rootReducer,
   middleware: [sagaMiddleware],
 });
+
+sagaMiddleware.run(rootSaga);
 
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(
