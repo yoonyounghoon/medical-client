@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import SidebarItem from 'components/SidebarItem/SidebarItem';
 import styled from 'styled-components';
 
@@ -10,9 +10,9 @@ function Sidebar() {
         <Title>MEDICAL-HELPER</Title>
       </StyledLink>
       <SidebarList>
-        <SidebarItem text="Medical-Check" to="/" />
+        <SidebarItem text="병원찾기" to="/" />
         <SidebarItem text="COVID-19" to="/covid" />
-        <SidebarItem text="Pharmacy" to="/pharmacy" />
+        <SidebarItem text="약국찾기" to="/pharmacy" />
       </SidebarList>
     </StyleSideBar>
   );
@@ -22,6 +22,7 @@ export default Sidebar;
 
 const StyleSideBar = styled.nav`
   padding: 1rem;
+  padding-bottom: 0;
 `;
 
 const SidebarList = styled.ul`
