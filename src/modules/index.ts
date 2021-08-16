@@ -1,13 +1,13 @@
 import { combineReducers } from '@reduxjs/toolkit';
-import position from './position';
-import hospital, { hospitalSaga } from './hospital';
+import position from './position/position';
 import { all } from '@redux-saga/core/effects';
 import { pharmacy, pharmacySaga } from './pharmacy';
+import { hospital, hospitalSaga } from './hospital';
 
 // 루트 리듀서
 export const rootReducer = combineReducers({
   position: position.reducer,
-  hospital: hospital.reducer,
+  hospital,
   pharmacy,
 });
 
