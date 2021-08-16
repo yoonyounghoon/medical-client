@@ -1,21 +1,6 @@
 export const SiDo = [
   { label: '시,도를 선택해주세요', value: '0' },
   { label: '서울시', value: '11' },
-  { label: '부산시', value: '26' },
-  { label: '대구시', value: '27' },
-  { label: '인천시', value: '28' },
-  { label: '광주시', value: '29' },
-  { label: '대전시', value: '30' },
-  { label: '울산시', value: '31' },
-  { label: '경기도', value: '41' },
-  { label: '강원도', value: '42' },
-  { label: '충북도', value: '43' },
-  { label: '충남도', value: '44' },
-  { label: '전북도', value: '45' },
-  { label: '전남도', value: '46' },
-  { label: '경북도', value: '47' },
-  { label: '경남도', value: '48' },
-  { label: '제주도', value: '50' },
 ];
 
 export const GunGu = [
