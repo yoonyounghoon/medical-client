@@ -38,7 +38,7 @@ function SelectBox() {
           </option>
         ))}
       </select>
-      <button onClick={handleSubmit}>조회하기</button>
+      <StyledButton onClick={handleSubmit}>조회하기</StyledButton>
     </SelectBoxWrapper>
   );
 }
@@ -49,4 +49,17 @@ const SelectBoxWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 2rem;
+  select {
+    height: 100%;
+  }
+  margin-bottom: 0.5rem;
+`;
+
+const StyledButton = styled.button`
+  background-color: #3095e9;
+  border: none;
+  color: white;
+  height: 100%;
+  border-radius: 8 px;
 `;
