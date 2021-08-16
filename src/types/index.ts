@@ -14,6 +14,29 @@ export type PharmacyInfo = {
   startTime: string;
 };
 
+export type PharmacyDetailInfo = {
+  dutyAddr: string;
+  dutyName: string;
+  dutyTel1: string;
+  dutyTime1c: string;
+  dutyTime1s: string;
+  dutyTime2c: string;
+  dutyTime2s: string;
+  dutyTime3c: string;
+  dutyTime3s: string;
+  dutyTime4c: string;
+  dutyTime4s: string;
+  dutyTime5c: string;
+  dutyTime5s: string;
+  dutyTime6c: string;
+  dutyTime6s: string;
+  hpid: string;
+  postCdn1: string;
+  postCdn2: string;
+  wgs84Lat: string;
+  wgs84Lon: string;
+};
+
 export type HospitalInfo = {
   bcExmdChrgTypeCd: number;
   ccExmdChrgTypeCd: number;
@@ -35,4 +58,36 @@ export type HospitalInfo = {
   siGunGuCd: number;
   stmcaExmdChrgTypeCd: number;
   ykindnm: string;
+};
+
+export type HospitalDetailInfo = {
+  dutyAddr: string;
+  dutyDiv: string;
+  dutyDivNam: string;
+  dutyEmcls: string;
+  dutyEmclsName: string;
+  dutyEryn: string;
+  dutyEtc: string;
+  dutyMapimg: string;
+  dutyName: string;
+  dutyTel1: string;
+  dutyTel3: string;
+  dutyTime1c: string;
+  dutyTime1s: string;
+  dutyTime2s: string;
+  dutyTime2c: string;
+  dutyTime3c: string;
+  dutyTime3s: string;
+  dutyTime4c: string;
+  dutyTime4s: string;
+  dutyTime5c: string;
+  dutyTime5s: string;
+  dutyTime6c: string;
+  dutyTime6s: string;
+  hpid: string;
+  postCdn1: string;
+  postCdn2: string;
+  rnum: string;
+  wgs84Lat: string;
+  wgs84Lon: string;
 };
