@@ -1,13 +1,12 @@
-import Footer from 'components/Footer/Footer';
-import List from 'components/List';
-import Map from 'components/Map/Map';
+import { HospitalList } from 'components/HospitalList';
+import SelectBox from 'components/SelectBox';
 import React from 'react';
 
 function MedicalCheckPage() {
   return (
     <div>
-      <Map />
-      <List />
+      <SelectBox />
+      <HospitalList />
     </div>
   );
 }
