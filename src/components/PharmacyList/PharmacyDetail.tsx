@@ -1,11 +1,11 @@
-import Map from 'components/Map';
+import DetailMap from 'components/Map/DetailMap';
+import OpenHours from 'components/OpenHours';
 import { getPharmacyDetail } from 'lib/api/pharmacy';
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { PharmacyDetailInfo } from 'types';
-import PharmacyInfo from './PharmacyInfo';
 
 type Params = {
   id: string;
@@ -35,36 +35,36 @@ function PharmacyDetail() {
         <h2>{data.dutyName}</h2>
         <p>주소: {data.dutyAddr}</p>
         <p>전화번호: {data.dutyTel1}</p>
-        <Map />
+        <DetailMap xPos={Number(data.wgs84Lat)} yPos={Number(data.wgs84Lon)} />
       </PharmacyMap>
       <PharmacyContents>
         <h3>영업 시간</h3>
-        <PharmacyInfo
+        <OpenHours
           day="월요일"
           startTime={data.dutyTime1s}
           endTime={data.dutyTime1c}
         />
-        <PharmacyInfo
+        <OpenHours
           day="화요일"
           startTime={data.dutyTime2s}
           endTime={data.dutyTime2c}
         />
-        <PharmacyInfo
+        <OpenHours
           day="수요일"
           startTime={data.dutyTime3s}
           endTime={data.dutyTime3c}
         />
-        <PharmacyInfo
+        <OpenHours
           day="목요일"
           startTime={data.dutyTime4s}
           endTime={data.dutyTime4c}
         />
-        <PharmacyInfo
+        <OpenHours
           day="금요일"
           startTime={data.dutyTime5s}
           endTime={data.dutyTime5c}
         />
-        <PharmacyInfo
+        <OpenHours
           day="토요일"
           startTime={data.dutyTime6s}
           endTime={data.dutyTime6c}

@@ -1,8 +1,7 @@
+import { Map } from 'components/Map';
 import { RootState } from 'modules';
-import { getHospitalList } from 'modules/hospital/reducer';
 import React from 'react';
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import HospitalListItem from './HospitalListItem';
 
 function HospitalList() {
@@ -10,6 +9,7 @@ function HospitalList() {
 
   return (
     <div>
+      {hospitalList && <Map hospitalList={hospitalList} zoom={10} />}
       {hospitalList &&
         hospitalList.map((data) => (
           <HospitalListItem key={data.hmcNo} data={data} />

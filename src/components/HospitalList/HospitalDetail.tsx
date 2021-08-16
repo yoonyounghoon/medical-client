@@ -1,3 +1,4 @@
+import DetailMap from 'components/Map/DetailMap';
 import OpenHours from 'components/OpenHours';
 import { getHospitalDetail } from 'lib/api/hospital';
 import React, { useState } from 'react';
@@ -31,13 +32,14 @@ function HospitalDetail() {
 
   return (
     <HospitalDetailWrap>
-      <HospitalMap>
+      <MapContainer>
         <h2>{data.dutyName}</h2>
         <h3>위치</h3>
         <p>{data.dutyAddr}</p>
         <p>{data.dutyMapimg}</p>
         <p>전화번호: {data.dutyTel1}</p>
-      </HospitalMap>
+        <DetailMap xPos={Number(data.wgs84Lat)} yPos={Number(data.wgs84Lon)} />
+      </MapContainer>
       <HospitalContents>
         <h3>영업 시간</h3>
         <OpenHours
@@ -79,7 +81,7 @@ export default HospitalDetail;
 
 const HospitalDetailWrap = styled.div``;
 
-const HospitalMap = styled.div`
+const MapContainer = styled.div`
   padding: 20px;
   h2 {
     margin-bottom: 1rem;
