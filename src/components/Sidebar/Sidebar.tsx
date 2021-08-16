@@ -11,7 +11,6 @@ function Sidebar() {
       </StyledLink>
       <SidebarList>
         <SidebarItem text="병원찾기" to="/" />
-        <SidebarItem text="COVID-19" to="/covid" />
         <SidebarItem text="약국찾기" to="/pharmacy" />
       </SidebarList>
     </StyleSideBar>
@@ -28,7 +27,7 @@ const StyleSideBar = styled.nav`
 const SidebarList = styled.ul`
   padding: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   list-style: none;
 `;
 

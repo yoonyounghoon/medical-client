@@ -3,7 +3,6 @@ import HospitalDetail from 'components/HospitalList/HospitalDetail';
 import PageNotFound from 'components/PageNotFound';
 import PharmacyDetail from 'components/PharmacyList/PharmacyDetail';
 import Sidebar from 'components/Sidebar';
-import CovidPage from 'pages/CovidPage';
 import MedicalCheckPage from 'pages/MedicalCheckPage';
 import PharmacyPage from 'pages/PharmacyPage';
 import React from 'react';
@@ -16,7 +15,6 @@ function App() {
       <Switch>
         <Route path="/" exact component={MedicalCheckPage} />
         <Route path="/hospital/:id" exact component={HospitalDetail} />
-        <Route path="/covid" component={CovidPage} />
         <Route path="/pharmacy" exact component={PharmacyPage} />
         <Route path="/pharmacy/:id" component={PharmacyDetail} />
         <Route component={PageNotFound} />
