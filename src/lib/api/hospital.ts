@@ -1,10 +1,20 @@
 import axios from 'axios';
 
-const API_KEY = process.env.REACT_APP_API_KEY;
+export type locationCode = {
+  siDoCd: number;
+  siGunGuCd: number;
+};
 
 // 지역별 검진기관 API
-export const getHospitalList = (sido: string, gungu: string) => {
-  return axios.get(
-    `http://apis.data.go.kr/openapi/service/rest/HmcSearchService/getRegnHmcList?serviceKey=${API_KEY}&siDoCd=${sido}&siGunGuCd=${gungu}`,
+export const getHospitalListAPI = async (location: locationCode) => {
+  const response = await axios.get(
+    `/hospital/${location.siDoCd}/${location.siGunGuCd}`,
   );
+  return response.data;
+};
+
+// 병원별 자세한 정보
+export const getHospitalDetail = async (name: string) => {
+  const response = await axios.get(`/hospital/${name}`);
+  return response.data;
 };
