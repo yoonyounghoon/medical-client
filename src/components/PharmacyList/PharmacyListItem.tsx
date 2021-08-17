@@ -14,7 +14,10 @@ function PharmacyListItem({ data }: PharmacyListItemProps) {
       <PharmacyWrapper>
         <h3>{data.dutyName}</h3>
         <p>
-          🕒 진료시간 : {startTime} ~ {endTime}{' '}
+          🕒 진료시간 :{' '}
+          {`${startTime.substr(0, 2)}:${startTime.substr(2, 2)}~${String(
+            endTime,
+          ).substr(0, 2)}:${String(endTime).substr(2, 2)}`}
         </p>
         <span>현재위치에서의 거리: {data.distance * 1000}m</span>
       </PharmacyWrapper>

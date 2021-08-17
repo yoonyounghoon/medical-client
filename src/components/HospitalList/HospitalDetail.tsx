@@ -86,6 +86,9 @@ const MapContainer = styled.div`
   h2 {
     margin-bottom: 1rem;
   }
+  h3 {
+    margin-bottom: 0.5rem;
+  }
   p {
     font-size: 14px;
     font-weight: 500;

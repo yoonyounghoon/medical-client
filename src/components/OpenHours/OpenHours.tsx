@@ -11,9 +11,10 @@ function OpenHours({ day, startTime, endTime }: OpenHoursInfoProps) {
   return (
     <OpenHoursInfoWrap>
       <h4>{day}</h4>
-      <p>
-        {startTime} ~ {endTime}
-      </p>
+      <p>{`${startTime.substr(0, 2)}:${startTime.substr(2, 2)}~${endTime.substr(
+        0,
+        2,
+      )}:${endTime.substr(2, 2)}`}</p>
     </OpenHoursInfoWrap>
   );
 }

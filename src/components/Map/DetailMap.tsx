@@ -14,7 +14,7 @@ function DetailMap({ xPos, yPos }: DetailMapProps) {
     const initMap = () => {
       map = new naver.maps.Map('map', {
         center: new naver.maps.LatLng(xPos, yPos),
-        zoom: 15,
+        zoom: 16,
       });
 
       // 현재 위치로 마커 생성
