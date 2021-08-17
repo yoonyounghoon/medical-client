@@ -79,6 +79,7 @@ export default PharmacyDetail;
 const PharmacyDetailWrap = styled.div``;
 
 const PharmacyMap = styled.div`
+  color: ${(props) => props.theme.mode.textColor};
   padding: 20px;
   h2 {
     margin-bottom: 1rem;
@@ -91,6 +92,7 @@ const PharmacyMap = styled.div`
 `;
 
 const PharmacyContents = styled.div`
+  color: ${(props) => props.theme.mode.textColor};
   padding: 20px;
   h3 {
     margin-bottom: 1rem;

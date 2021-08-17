@@ -36,14 +36,16 @@ export default Footer;
 
 const FooterWrapper = styled.div`
   width: 100%;
-  padding: 1rem;
+  /* padding: 1rem; */
   background-color: #f5f6fa;
 `;
 
 const FooterItem = styled.div`
+  background: ${(props) => props.theme.mode.mainBackground};
+  color: ${(props) => props.theme.mode.textColor};
   display: flex;
   text-align: left;
-  padding: 0.5rem 0;
+  padding: 1rem;
   &:hover {
     background-color: #3095e9;
     color: white;

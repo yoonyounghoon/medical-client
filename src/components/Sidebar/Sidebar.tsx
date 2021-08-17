@@ -2,13 +2,20 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import SidebarItem from 'components/SidebarItem/SidebarItem';
 import styled from 'styled-components';
+import useDarkMode from 'hooks/useDarkMode';
+import Button from 'components/Button';
 
-function Sidebar() {
+type SidebarProps = {
+  toggleTheme: () => void;
+};
+
+function Sidebar({ toggleTheme }: SidebarProps) {
   return (
     <StyleSideBar>
-      <StyledLink to="/">
+      <NavLink to="/">
         <Title>MEDICAL-HELPER</Title>
-      </StyledLink>
+      </NavLink>
+      <ToggleBtn onClick={toggleTheme}>다크모드</ToggleBtn>
       <SidebarList>
         <SidebarItem text="병원찾기" to="/" />
         <SidebarItem text="약국찾기" to="/pharmacy" />
@@ -32,11 +39,19 @@ const SidebarList = styled.ul`
 `;
 
 const Title = styled.h1`
-  color: #3095e9;
+  color: ${(props) => props.theme.mode.textColor};
   text-align: center;
   text-decoration: none;
 `;
 
-const StyledLink = styled(NavLink)`
-  text-decoration: none;
+const ToggleBtn = styled(Button)`
+  position: absolute;
+  top: 18px;
+  right: 16px;
+  width: 100px;
+  height: 30px;
+  border: 2px solid #dbdbdb;
+  font-weight: bold;
+  background: ${(props) => props.theme.mode.mainBackground};
+  color: ${(props) => props.theme.mode.textColor};
 `;

@@ -22,7 +22,7 @@ function OpenHours({ day, startTime, endTime }: OpenHoursInfoProps) {
 export default OpenHours;
 
 const OpenHoursInfoWrap = styled.div`
-  background: #e5e7ec;
+  color: ${(props) => props.theme.mode.textColor};
   border-radius: 1rem;
   padding: 1rem;
   margin-bottom: 1rem;

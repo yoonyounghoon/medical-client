@@ -82,6 +82,7 @@ export default HospitalDetail;
 const HospitalDetailWrap = styled.div``;
 
 const MapContainer = styled.div`
+  color: ${(props) => props.theme.mode.textColor};
   padding: 20px;
   h2 {
     margin-bottom: 1rem;
@@ -97,6 +98,7 @@ const MapContainer = styled.div`
 `;
 
 const HospitalContents = styled.div`
+  color: ${(props) => props.theme.mode.textColor};
   padding: 20px;
   h3 {
     margin-bottom: 1rem;

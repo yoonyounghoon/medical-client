@@ -26,4 +26,6 @@ const HospitalWrapper = styled.div`
   h3 {
     margin-bottom: 4px;
   }
+  background: ${(props) => props.theme.mode.mainBackground};
+  color: ${(props) => props.theme.mode.textColor};
 `;

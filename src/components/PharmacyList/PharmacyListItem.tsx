@@ -28,6 +28,8 @@ function PharmacyListItem({ data }: PharmacyListItemProps) {
 export default PharmacyListItem;
 
 const PharmacyWrapper = styled.div`
+  background: ${(props) => props.theme.mode.mainBackground};
+  color: ${(props) => props.theme.mode.textColor};
   width: 100%;
   padding: 23px 20px;
   h3 {
