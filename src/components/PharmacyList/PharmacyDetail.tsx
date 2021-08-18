@@ -1,8 +1,10 @@
 import DetailMap from 'components/Map/DetailMap';
 import OpenHours from 'components/OpenHours';
+import SkeletonCard from 'components/Skeleton/SkeletonCard';
 import { getPharmacyDetail } from 'lib/api/pharmacy';
 import React, { useState } from 'react';
 import { useEffect } from 'react';
+import Skeleton from 'react-loading-skeleton';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { PharmacyDetailInfo } from 'types';
@@ -26,7 +28,30 @@ function PharmacyDetail() {
   }, [id]);
 
   if (!data) {
-    return <p>로딩중..</p>;
+    return (
+      <PharmacyDetailWrap>
+        <PharmacyMap>
+          <h2>
+            <Skeleton width={300} height={50} />
+          </h2>
+          <p>
+            <Skeleton width={150} height={10} />
+          </p>
+          <p>
+            <Skeleton width={150} height={10} />
+          </p>
+          <Skeleton height={300} />
+        </PharmacyMap>
+        <PharmacyContents>
+          <h3>영업 시간</h3>
+          <SkeletonCard />
+          <SkeletonCard />
+          <SkeletonCard />
+          <SkeletonCard />
+          <SkeletonCard />
+        </PharmacyContents>
+      </PharmacyDetailWrap>
+    );
   }
 
   return (
