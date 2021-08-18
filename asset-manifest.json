@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/medical-client/static/css/main.6f156eda.chunk.css",
+    "main.js": "/medical-client/static/js/main.30c90172.chunk.js",
+    "main.js.map": "/medical-client/static/js/main.30c90172.chunk.js.map",
+    "runtime-main.js": "/medical-client/static/js/runtime-main.14be7cd0.js",
+    "runtime-main.js.map": "/medical-client/static/js/runtime-main.14be7cd0.js.map",
+    "static/js/2.dbe87cd2.chunk.js": "/medical-client/static/js/2.dbe87cd2.chunk.js",
+    "static/js/2.dbe87cd2.chunk.js.map": "/medical-client/static/js/2.dbe87cd2.chunk.js.map",
+    "index.html": "/medical-client/index.html",
+    "static/css/main.6f156eda.chunk.css.map": "/medical-client/static/css/main.6f156eda.chunk.css.map",
+    "static/js/2.dbe87cd2.chunk.js.LICENSE.txt": "/medical-client/static/js/2.dbe87cd2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.14be7cd0.js",
+    "static/js/2.dbe87cd2.chunk.js",
+    "static/css/main.6f156eda.chunk.css",
+    "static/js/main.30c90172.chunk.js"
+  ]
+}
