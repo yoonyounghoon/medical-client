@@ -17,7 +17,7 @@ function Sidebar({ toggleTheme }: SidebarProps) {
       </NavLink>
       <ToggleBtn onClick={toggleTheme}>다크모드</ToggleBtn>
       <SidebarList>
-        <SidebarItem text="병원찾기" to="/" />
+        <SidebarItem text="병원찾기" to="/medical-client" />
         <SidebarItem text="약국찾기" to="/pharmacy" />
       </SidebarList>
     </StyleSideBar>

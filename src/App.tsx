@@ -22,7 +22,7 @@ function App() {
         <GlobalStyle />
         <Sidebar toggleTheme={toggleTheme} />
         <Switch>
-          <Route path="/" exact component={MedicalCheckPage} />
+          <Route path="/medical-client" exact component={MedicalCheckPage} />
           <Route path="/hospital/:id" exact component={HospitalDetail} />
           <Route path="/pharmacy" exact component={PharmacyPage} />
           <Route path="/pharmacy/:id" component={PharmacyDetail} />
